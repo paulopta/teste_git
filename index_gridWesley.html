@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+</head>
+
+<style>
+     html{
+        width: 100%;
+    }
+    body,ul,li,p{
+        margin: 0px;
+        padding: 0px;
+        font-size: 1.2rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    a, a:visited{
+        text-decoration: none;
+        cursor: pointer;
+        color: white;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 5fr 4fr;
+        /*width: 800px;*/
+        margin: 0 auto;
+        gap: 10px;
+        grid-template-areas: "header header header" 
+                              "sidebar main main" 
+                              "footer footer footer";                                  
+    }    
+    .header{
+        grid-area: header;
+        background-color:blue;
+        color: white;
+        padding: 15px;        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; 
+    }
+    .sidebar{
+        grid-area: sidebar;
+        background-color:gray;
+        text-align: center;
+        color: white;
+        padding: 15px;        
+    }
+    .main{
+        grid-area: main;
+        background-color:pink;
+        text-align: center;
+        color: white;
+        padding: 15px;        
+        justify-content: left;
+    }
+    .footer{
+        grid-area: footer;
+        background-color:brown;
+        text-align: center;
+        color: white;
+        padding: 15px;        
+    }
+    
+    .menu > ul > li{
+        display: inline;
+        list-style: none;
+        padding: 20px;
+    }
+    .cartoes{
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: left;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .cartao{
+        padding: 20px;
+        width: 200px;
+
+    }
+    img{
+        max-width: 100%;
+        display: block;
+    }
+
+    .container2{
+        display: flex;
+        width: 500px;
+        margin: 0 auto;
+        gap: 10px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .parte2{
+        justify-content:space-around;
+    }
+</style>
+
+<body>    
+    <div class="container">
+        <div class="header">
+            <a href="http://www.uol.com.br">UOL</a>
+            <nav>
+                <div class="menu">
+                    <ul>
+                        <li class="item_menu">Home</li>
+                        <li class="item_menu">About</li>
+                        <li class="item_menu">services</li>
+                        <li class="item_menu">Contact</li>
+                    </ul>
+                </div>
+            </nav>    
+        </div>
+        <div class="sidebar">Item 2</div>
+        <div class="main">
+
+             <div class="cartoes">
+                <div class="cartao">
+                    <img src="imgs/img1.jpg">
+                    <p> Descrição </p>
+                </div>
+                <div class="cartao">
+                    <img src="imgs/img2.jpg">
+                    <p> Descrição </p>
+                </div>
+                <div class="cartao">
+                    <img src="imgs/img3.jpg">
+                    <p> Descrição </p>
+                </div>
+                <div class="cartao">
+                    <img src="imgs/img4.jpg">
+                    <p> Descrição </p>
+                </div>
+                <div class="cartao">
+                    <img src="imgs/img5.jpg">
+                    <p> Descrição </p>
+                </div>
+                <div class="cartao">
+                    <img src="imgs/img6.jpg">
+                    <p> Descrição </p>
+                </div>
+             </div>   
+
+
+        </div>
+        <div class="footer">Item 4</div>        
+    </div>
+    <br/><br/>
+    <div class="container2">
+        <div>Item 1</div>               
+    </div>
+    <div class="container2 parte2">
+        <div>SideBar</div>               
+        <div>Main</div>               
+    </div>
+    <div class="container2 parte3">
+        <div>Footer</div>                                      
+    </div>
+
+</body>
+</html>

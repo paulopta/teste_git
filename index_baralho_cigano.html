@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baralho Cigano</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(white, lightblue);
+            background-size: cover;
+            background-repeat: no-repeat;            
+        }
+        .content{
+            display: grid;
+            grid-template-areas: "header header"
+                                  "main main"
+                                  "footer footer";
+            grid-template-columns: "5fr 5fr";                      
+            margin: 0 auto;
+            justify-content: space-between;
+            text-align: center;                 
+        }
+        .header{
+            grid-area: header;
+            border: 2px solid brown;
+        }
+        .main{
+            grid-area: main;         
+            border: 2px solid green;             
+        }
+        .footer{
+            grid-area: footer;
+            color: black;
+            text-align: center;       
+        }
+        .cartoes{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;     
+            align-items: center;                   
+        }
+        p{
+            vertical-align: top;
+        }
+        .carta{
+            width: 210px;
+            height: 400px;
+            background-image: url("imgs/verso_carta.jpg");
+            color: white;
+        }
+        .carta:hover{
+            color: black;
+        }
+
+        @media screen and (max-width: 600px){
+            .header{
+                font-size: 120%;
+            }
+            
+        }
+
+        @media screen and (max-width: 601px) and (max-width: 1024px){
+            
+            .header{
+                font-size: 80%;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <h1>Baralho Cigano</h1>
+        </div>
+        <div class="main">
+            <div class="cartoes">
+                <div class="carta">
+                    
+                </div>
+                <div class="carta">
+                    
+                </div>
+                <div class="carta">
+                    
+                </div>
+                <div class="carta">
+                    
+                </div>
+                <div class="carta">
+                    
+                </div>
+                <div class="carta">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>@Copyright  2025 - Paulo Henrique Rodrigues</p>
+        </div>
+    </div>
+</body>
+</html>

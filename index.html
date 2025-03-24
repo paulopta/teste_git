@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Flex</title>
+</head>
+
+<style>
+
+    /* CSS - GERAL */
+
+    html{
+        height: 100%;
+    }
+    body,ul,li,p{
+        margin: 0px;
+        padding: 0px;
+        font-size: 1.2rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    header a{
+        text-decoration: none;
+    }
+    h1{
+        font-size: 120%;
+        text-align: center;
+    }
+    img{
+        max-width: 100%;
+        display: block;
+    }
+    /* CSS - GERAL */
+
+    /* Cabeçalho */
+    header{
+        background-color: #727272;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+    .menu{
+        display: flex;
+    }
+    .menu li{
+        list-style: none;
+        margin-left: 20px;
+    }
+
+    /* Fim do Cabeçalho */
+
+
+    /* Rodapé */
+    footer{
+        background-color: #727272;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        color: white  
+    }
+    /* Fim do Rodapé */
+    
+    .flex{
+        display: flex; 
+        flex-wrap: wrap;
+        max-width: 800px;
+        margin: 0 auto;  
+    }
+    .flex > div{
+        flex: 1 1 200px;
+        margin: 10px;
+    }
+
+</style>
+
+<body>
+
+    <header>
+        <a href="#"> Marca </a>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>    
+    </header>
+    <content>
+    <h1>Exemplo Flex</h1>
+        <section class="flex">
+            <div>
+                <img src="imgs/img1.jpg" />
+                <p> Legenda </p>
+            </div>
+            <div>    
+                <img src="imgs/img2.jpg" />
+                <p> Legenda </p>
+            </div>
+            <div>    
+            <img src="imgs/img3.jpg" />
+            <p> Legenda </p>
+        </div>
+        <div>    
+            <img src="imgs/img4.jpg" />
+            <p> Legenda </p>
+        </div>
+        <div>    
+            <img src="imgs/img5.jpg" />
+            <p> Legenda </p>
+        </div>
+        <div>    
+            <img src="imgs/img6.jpg" />
+            <p> Legenda </p>
+        </div>
+        <div>    
+        </section>
+    </content>
+    <footer>
+        Copyright 2025 - Todos os direitos reservados MinhaPágina.com
+    </footer>
+
+</body>
+</html>
